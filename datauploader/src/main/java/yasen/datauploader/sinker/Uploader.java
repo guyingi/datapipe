@@ -112,12 +112,11 @@ public class Uploader implements Runnable{
 
             metaMsg = convertTagToKeyword(metaMsg);
             logger.log(Level.INFO,"补充元信息完成");
-            System.out.println(metaMsg.toJSONString());
-            /*
+//            System.out.println(metaMsg.toJSONString());
             String rowkeyInSeriesuidTable = DataUploaderTool.formatRowkeyToNBit(metaMsg.getString(SysConsts.SeriesUID),60);
 
             //步骤三：检查完毕，开始上传元信息到hbase
-            *//**存储元数据到hbase，失败回滚**//*
+            /**存储元数据到hbase，失败回滚*/
             try {
                 //查询dicomseriesuid表，查看该序列是否已被收录进系统
                 boolean isExsits = hbaseService.isExists(uploaderConf.getDicomSeriesuidTablename(), rowkeyInSeriesuidTable);
@@ -137,8 +136,8 @@ public class Uploader implements Runnable{
                 continue;
             }
 
-            //步骤四：上传缩略图到hbase
-            *//**存储缩略图到hbase，失败回滚**//*
+            //步骤四：上传缩略图到hbase/
+            /*存储缩略图到hbase，失败回滚*/
             if(success){
                 logger.log(Level.INFO,"元信息存入hbase成功");
                 success = SysConsts.SUCCESS==hbaseService.uploadThumbnail(seriesDir,metaMsg.getString(SysConsts.ROWKEY),thumbnailRowkeyList);
@@ -169,12 +168,12 @@ public class Uploader implements Runnable{
             }
 
             //步骤六：存储元数据到es,  新流程里面上传的时候不存入es,后面由定时任务去hbase中同步到es
-           *//* if(success){
+            if(success){
                 logger.log(Level.INFO,"dicom文件上传hdfs成功:"+position);
                 success = SysConsts.SUCCESS== elasticSearchService.insertOne(uploaderConf.getIndexDicom(),
                         uploaderConf.getTypeDicom(),metaMsg.getString(SysConsts.SeriesUID),metaMsg);
             }
-            *//*
+
 
             //到达此步骤，说明全部成功，写该序列全部成功的日志
             if(success){
@@ -185,7 +184,7 @@ public class Uploader implements Runnable{
                 logger.log(Level.INFO,"dicom文件上传hdfs失败:"+position);
                 System.out.println(success);
                 DataUploaderTool.recordLog(logger,dir, true, "dicom文件上传hdfs失败");
-            }*/
+            }
         }
     }
 

@@ -17,17 +17,17 @@ public class Main {
     public static void main(String[] args) throws InterruptedException {
 //        String dir = "F:\\dicom\\标记测试数据\\dicom\\breast";
 //        String dir = "F:\\dicom\\new\\des\\00000c6d-dc77763e-5249ac89-f0aeae65-027a8812\\EY624867 Dong Guo Qin\\ZX1845538 ScreeningBilateral Mammography\\MG R CC";
-        String dir  ="F:\\dicom\\new\\shibai";
-        upload(dir);
+//        String dir  ="F:\\dicom\\new\\shibai";
+//        upload(dir);
 
-//        if(args.length!=0 && args[0].length()!=0 && checkParameter(args[0])) {
-//            logger.log(Level.INFO,"读取dicom路径："+args[0]);
-//            System.out.println("读取dicom路径："+args[0]);
-//            upload(args[0]);
-//        }else{
-//            logger.log(Level.ERROR,"传入路径错误，可能是分隔符错误或者文件不存在");
-//            printUsage();
-//        }
+        if(args.length!=0 && args[0].length()!=0 && checkParameter(args[0])) {
+            logger.log(Level.INFO,"读取dicom路径："+args[0]);
+            System.out.println("读取dicom路径："+args[0]);
+            upload(args[0]);
+        }else{
+            logger.log(Level.ERROR,"传入路径错误，可能是分隔符错误或者文件不存在");
+            printUsage();
+        }
     }
 
     /*************分配线程池多线程上传****************/

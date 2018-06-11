@@ -137,7 +137,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>yasen.datauploader.sinker.IndexFromHbase</mainClass>
+                            <mainClass>yasen.datauploader.sinker.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
