@@ -137,7 +137,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>yasen.datauploader.sinker.Main</mainClass>
+                            <mainClass>qed.datauploader.sinker.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>yasen</groupId>
+    <groupId>qed</groupId>
     <artifactId>datapipe</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>datauploader</module>
-        <module>toground</module>
+        <module>downloaddicom</module>
         <module>indexhbase</module>
     </modules>
 
