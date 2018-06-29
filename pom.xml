@@ -8,9 +8,10 @@
     <artifactId>datapipe</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>datauploader</module>
-        <module>downloaddicom</module>
-        <module>indexhbase</module>
+        <module>datapipe-datauploader</module>
+        <module>datapipe-downloaddicom</module>
+        <module>datapipe-indexhbase</module>
+        <module>datapipe-downloaddesensitization</module>
     </modules>
 
     <packaging>pom</packaging>
