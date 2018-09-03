@@ -53,6 +53,7 @@ public class UploaderConfiguration {
     /**********跟数据相关参数********************/
     private String organ = null;
     private String edfHospital = null;
+    private String kfbHospital = null;
 
     private String zookeeperQuorum = null;
     private String zookeeperClientPort = null;
@@ -111,6 +112,7 @@ public class UploaderConfiguration {
 
         organ = props.getProperty("datauploader.organ");
         edfHospital = props.getProperty("edf.hospital");
+        kfbHospital = props.getProperty("kfb.hospital");
 
         zookeeperQuorum = props.getProperty("hbase.zookeeper.quorum");
         zookeeperClientPort = props.getProperty("hbase.zookeeper.property.clientPort");
@@ -214,6 +216,10 @@ public class UploaderConfiguration {
 
     public String getEdfHospital() {
         return edfHospital;
+    }
+
+    public String getKfbHospital() {
+        return kfbHospital;
     }
 
     public String getZookeeperQuorum() {

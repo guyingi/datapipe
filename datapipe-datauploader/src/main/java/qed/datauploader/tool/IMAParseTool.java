@@ -34,7 +34,7 @@ public class IMAParseTool {
 //        JSONObject jsonObject = extractJsonMsg("F:\\dicom\\PA025\\ST0\\SE13\\IM0");
 //        System.out.println(jsonObject.toString());
 //        String path = "F:\\dicom\\new\\des\\00000c6d-dc77763e-5249ac89-f0aeae65-027a8812\\EY624867 Dong Guo Qin\\ZX1845538 ScreeningBilateral Mammography\\MG R CC\\MG000000.dcm";
-        String path = "F:\\实验室\\download\\1x2x840x113704x1x111x2292x1514255534x12\\CT000072.dcm";
+        String path = "F:\\实验室\\jpg\\1.2.156.112605.14038005439492.20160519033142.4.11644.21.dcm";
         printInfo(path);
 //        String dirPath  ="F:\\dicom\\dicom\\PETMR\\1\\PET";
 //        DICOM dicom = new DICOM();

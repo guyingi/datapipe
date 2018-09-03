@@ -13,8 +13,8 @@ import java.util.concurrent.Executors;
 public class Main {
     static Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) {
-//        String confFilePath = "C:\\Users\\WeiGuangWu\\Downloads\\1411876.json";
-//        String desDir  = "F:\\实验室\\infosupplyer";
+//        String confFilePath = "C:\\Users\\WeiGuangWu\\Downloads\\temp1887051.json";
+//        String desDir  = "F:\\实验室\\temp";
 //        doDownload(confFilePath,desDir);
         String confFilePath = null;
         String desDir = null;

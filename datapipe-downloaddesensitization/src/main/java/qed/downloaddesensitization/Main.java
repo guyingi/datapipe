@@ -27,7 +27,10 @@ public class Main {
         if(args.length==2) {
             jsonFilePath = args[0];
             desPath = args[1];
+        }else{
+            usage();
         }
+
         if(StringUtils.isBlank(jsonFilePath) || StringUtils.isBlank(desPath)){
             usage();
         }
@@ -35,6 +38,6 @@ public class Main {
     }
 
     public static void usage(){
-        System.out.println("usage: downloaddesentisize.jar jsonFilePath des");
+        System.out.println("usage: downloaddesentisize.jar jsonFilePath destinationpath");
     }
 }

@@ -187,7 +187,7 @@ public class DataUploaderTool {
             Date createDate = new Date(attr.lastModifiedTime().toMillis());
             cal.setTime(createDate);
             String year = cal.get(Calendar.YEAR)+"";
-            String month = formatDigitalToNBit(cal.get(Calendar.MONTH)+"",2);
+            String month = formatDigitalToNBit(cal.get(Calendar.MONTH)+1+"",2);
             String day = cal.get(Calendar.DAY_OF_MONTH)+"";
             return year+month+day;
         } catch (Exception e) {

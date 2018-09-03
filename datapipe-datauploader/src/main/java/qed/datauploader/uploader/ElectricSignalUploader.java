@@ -109,7 +109,6 @@ public class ElectricSignalUploader {
             e.printStackTrace();
         }
 
-/*
         //将元素据写入hbase.  成功则继续，失败回滚
         if(success){
             try {
@@ -124,7 +123,7 @@ public class ElectricSignalUploader {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }*/
+        }
 
         //写元数据到es,失败不回滚，严格记录日志。主要用于排错
         if(success){
@@ -140,7 +139,7 @@ public class ElectricSignalUploader {
 
 
     public static void main(String[] args) {
-        String str = "F:\\lab\\edf_upload_test";
+        String str = "F:\\实验室\\EEG";
         new ElectricSignalUploader().upload(str);
 //        FileSystem fs;
 //        try {

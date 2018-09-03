@@ -105,7 +105,7 @@ public class MutilThread implements Runnable {
     }
 
     public static void main(String[] args) {
-        String hdfspath = "/yasen/bigdata/dicom/2016/11/2/1x2x840x113704x1x111x2292x1514255534x12";
+        String hdfspath = "/yasen/bigdata/dicom/2016/12/9/1x2x840x113681x2229455454x932x3683232165x676x1";
         String local = "F:\\实验室\\download";
         new MutilThread().downloadSingleSeries(hdfspath,local);
     }
